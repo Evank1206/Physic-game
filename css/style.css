@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+}
+
+body{
+    background-image: url(../img/pink.png);
+}
+
+.main{
+    background-image: url(../img/frame1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 768px;
+    width: 770px;
+    height: 600px;
+    margin: 7% auto;
+}
+h1{
+    font-family:'Aclonica', sans-serif;
+    text-align: center;
+    color: brown;
+    font-size: 47px;
+}
+
+section{
+    position: relative;
+    top:30%;
+    left: 43%;
+    font-size: 21px;
+    font-weight: bold;
+    color: brown;
+}
+
+.btn{
+    position: absolute;
+    top: 713px;
+    left: 46%;
+    font-size: 47px;
+    background-color: brown;
+    color: white;
+    border-radius: 26%;
+    padding: 16px 21px 16px 21px;
+}
