@@ -13,39 +13,46 @@
 //             guess = prompt('Please Try Again!'); 
 
 //     }
-         
+
 // }
-var letters = 'abcdefghijklmnopqrstuvwxyz';
+
+var letters = [
+"a","b","c", "d", "e",
+"f","g","h", "i", "j", 
+"k","l","m", "n", "o", 
+"p","q","r", "s", "t",
+"u","v","w", "x", "y", "z"  
+];
+
 var guess = 10;
 var losses = 0;
 var win = 0;
 
-
 function randomLetters() {
-    var index = Math.floor( Math.random() * letters.length);
-    // console.log(index);
-    // console.log (letters[index]);
+    var index = Math.floor(Math.random() * letters.length);
+    console.log(index);
+    console.log (letters[index]);
     return letters[index];
- }
+}
+var computerPicked = randomLetters();
 
- var computerPicked = randomLetters();
-document.onkeypress = function (event){
+document.onkeypress = function (event) {
     // console.log(event.key);
-    var myGuess = event.key; 
+    var myGuess = event.key;
 
-    if(myGuess === computerPicked){
-        win ++;
+    if (myGuess === computerPicked) {
+        win++;
         guess = 10;
         computerPicked = randomLetters();
         document.getElementById('Guess_left').innerHTML = guess;
         document.getElementById('Wins').innerHTML = win;
-        
-        
+
+
     }
     else {
         // if guess > 0, then you decrease guess by 1
         // else, you lose, increase losses by 1 and rest guess = 10
-        if( guess > 0){
+        if (guess > 0) {
             guess -= 1;
             document.getElementById('Guess_left').innerHTML = guess;
         }
