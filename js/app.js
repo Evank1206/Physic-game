@@ -30,7 +30,7 @@ var win = 0;
 
 function randomLetters() {
     var index = Math.floor(Math.random() * letters.length);
-    console.log(index);
+    // console.log(index);
     console.log (letters[index]);
     return letters[index];
 }
@@ -46,7 +46,6 @@ document.onkeypress = function (event) {
         computerPicked = randomLetters();
         document.getElementById('Guess_left').innerHTML = guess;
         document.getElementById('Wins').innerHTML = win;
-
 
     }
     else {
