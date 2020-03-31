@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <!-- google-font CDN link -->
     <link
         href="https://fonts.googleapis.com/css?family=Aclonica|Bungee+Inline|Cute+Font|Happy+Monkey|Roboto|Rouge+Script|Turret+Road|Vibes|Waiting+for+the+Sunrise&display=swap"
         rel="stylesheet">
-
+    <!-- style.css import to html -->
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- app title -->
     <title>Physic Game</title>
 </head>
 
 <body>
+    <!-- app main container -->
     <div class="main">
+        <!-- app headline -->
         <h1>Guess the letter!</h1>
 
         <section>
@@ -26,11 +28,13 @@
             <p>Guesses Left: _<span id="Guess_left"></span>_</p>
             <p>Loses: _<span id="loses"></span>_</p>
             <p>Wins: _<span id="Wins"></span>_</p>
-            
+            <br>
+            <p id="clickedLetters">clicked letters:</p>
+
         </section>
         <!-- <button class="btn">Play</button> -->
     </div>
-
+    <!-- javascript file imported here  -->
     <script src="js/app.js"></script>
 </body>
 
