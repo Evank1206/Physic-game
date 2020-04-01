@@ -13,7 +13,7 @@ var clickedLetter = [];
 function randomLetters() {
     var index = Math.floor(Math.random() * letters.length);
 
-    console.log(letters[index], index);
+    // console.log(letters[index], index);
     // this case you can see computer picked letters
     // clickedLetter.push(letters[index])
     return letters[index];
@@ -23,21 +23,23 @@ var computerPicked = randomLetters();
 
 // onkeypress() method for when click on key-board it will grabs the value of letter
 document.onkeypress = function (event) {
-    console.log(event.key);
-    console.log(clickedLetter);
-// grabbed the value of letter pushed to empty array here
-    clickedLetter.push(event.key)
+    // console.log(event.key);
+    // console.log(clickedLetter);
+    // grabbed the value of letter pushed to empty array here
+    // clickedLetter.push(letters[index])
     var myGuess = event.key;
-// to DOM the Array which is displays what letters are clicked
-    document.getElementById('clickedLetters').innerHTML = clickedLetter;
-// conditional statement for matching the letter that computer picked
+
+    // conditional statement for matching the letter that computer picked
     if (myGuess === computerPicked) {
+        clickedLetter.push(event.key)
         win++;
         guess = 10;
         computerPicked = randomLetters();
+        // to DOM the Array which is displays what letters are clicked
+        document.getElementById('clickedLetters').innerHTML = clickedLetter;
         document.getElementById('Guess_left').innerHTML = guess;
         document.getElementById('Wins').innerHTML = win;
-        // document.getElementById('clickedLetters').innerHTML = clickedLetter;
+
     } else {
         // if guess > 0, then you decrease guess by 1
         // else, you lose, increase losses by 1 and rest guess = 10
@@ -53,6 +55,17 @@ document.onkeypress = function (event) {
 
             computerPicked = randomLetters();
         }
+    }
+    // if reaches to 10 it wll gave little message for user
+    if (win === 6) {
+        var userName = prompt("Please Enter Your Name:");
+        alert("Congratulation! " + userName + "You guessed correctly!")
+        win;
+    }
+
+    if (losses === 6) {
+        alert("Game Over")
+        losses;
     }
 };
 

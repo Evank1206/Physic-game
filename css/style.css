@@ -30,14 +30,6 @@ section{
     font-weight: bold;
     color: brown;
 }
-
-/* .btn{
-    position: absolute;
-    top: 713px;
-    left: 46%;
-    font-size: 47px;
-    background-color: brown;
-    color: white;
-    border-radius: 26%;
-    padding: 16px 21px 16px 21px;
-} */
+#clickedLetters{
+    float: left;
+}
